@@ -3,10 +3,11 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.11
+      python: 3.14
 
   build:
     commands:
+      - cd aws-basic-cicdPipeline
       - pip install -r requirements.txt
 
   post_build:
