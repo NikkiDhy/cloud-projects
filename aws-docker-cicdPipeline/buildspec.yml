@@ -11,8 +11,8 @@ phases:
       python: 3.14
   pre_build:
     commands:
-      - echo "Installing dependencies..."
-      - pip install -r requirements.txt
+      # - echo "Installing dependencies..."
+      # - pip install -r requirements.txt
   build:
     commands:
       - echo "Running tests..."
