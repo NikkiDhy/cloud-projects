@@ -17,6 +17,8 @@ phases:
     commands:
       - echo "Running tests..."
       - cd aws-docker-cicdPipeline
+      - echo "Running Python syntax check..."
+      - python -m py_compile app.py
       - echo "Building Docker image..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
       - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" .
